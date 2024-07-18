@@ -1,15 +1,15 @@
-var MemoryStorage = function() {
+var MemoryStorage = function () {
   var storage = [];
 
-  this.getAll = function() {
+  this.getAll = function () {
     return storage;
   };
 
-  this.add = function(item) {
+  this.add = function (item) {
     storage.push(item);
   };
 
-  this.getById = function(id) {
+  this.getById = function (id) {
     for (var i = 0; i < storage.length; i++) {
       if (storage[i].id === id) {
         return storage[i];
@@ -19,7 +19,7 @@ var MemoryStorage = function() {
     return null;
   };
 
-  this.deleteById = function(id) {
+  this.deleteById = function (id) {
     for (var i = 0; i < storage.length; i++) {
       if (storage[i].id === id) {
         storage.splice(i, 1);
